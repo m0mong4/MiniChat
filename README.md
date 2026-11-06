@@ -19,7 +19,7 @@ MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enr
 -  Afficher le contenu d'une table dans une page web (les *n* derniers commentaires)
 -  Ajouter un commentaire en base de données
 -  Se protéger des failles XSS (via la suppression ou l'échappement des balises)
--  Découvrir les [variables de session](https://www.php.net/manual/fr/reserved.variables.session.php)
+-  Découvrir les variables de session
 
 ### Version 2
 
