@@ -1,0 +1,329 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url(imagefond.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(9px, 1.05vw, 17px);
+    width: 34%;
+    margin: 1.5em 0 1.5em 46%;
+    padding: 0;
+}
+
+#formulaire {
+    background: #CFE0EE;
+    border-radius: 1.2em;
+    padding: 0.7em 1em;
+    margin-bottom: 1em;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+#champs {
+    width: 100%;
+}
+
+.lignes td {
+    padding: 0.25em;
+}
+
+.lignes td:first-child {
+    width: 55%;
+}
+
+.lignes input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 0.8em;
+    padding: 0.4em 0.7em;
+    background: #fff;
+    font-size: 1em;
+}
+
+.lignes input[type="text"]:focus {
+    outline: 2px solid #E8A9C4;
+}
+
+#bouton td {
+    text-align: center;
+}
+
+#bouton input[type="submit"] {
+    background: #E8A9C4;
+    color: #4a1b30;
+    border: none;
+    border-radius: 999px;
+    padding: 0.5em 1.6em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#bouton input[type="submit"]:hover {
+    background: #d98aa9;
+    color: #fff;
+}
+
+#messages {
+    margin-left: 12%;
+}
+
+#messages h2 {
+    margin: 0.6em 0 0.8em;
+    font-size: 1.3em;
+}
+
+.bulle {
+    background: #F6D3E0;
+    border-radius: 1.1em;
+    padding: 0.55em 1em;
+    position: relative;
+    margin-bottom: 1.3em;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.bulle::after {
+    content: "";
+    position: absolute;
+    left: 1.5em;
+    bottom: -0.6em;
+    border: 0.6em solid transparent;
+    border-top-color: #F6D3E0;
+    border-bottom: 0;
+}
+
+/* ---------- Accessibilité ---------- */
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ---------- Bulles : texte, dates, actions ---------- */
+.bulle {
+    padding-right: 4.2em;          /* place pour les boutons */
+    word-break: break-word;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.bulle .meta {
+    font-size: 0.75em;
+    color: #7a4a5e;
+    margin-top: 0.25em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 0.9em;
+}
+
+.bulle .meta .modif {
+    font-style: italic;
+}
+
+.bulle .actions {
+    position: absolute;
+    top: 0.4em;
+    right: 0.6em;
+    display: flex;
+    gap: 0.2em;
+}
+
+.bulle .actions a {
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1;
+    padding: 0.25em;
+    border-radius: 0.5em;
+    opacity: 0.6;
+}
+
+.bulle .actions a:hover,
+.bulle .actions a:focus-visible {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.bulle-active {
+    box-shadow: 0 0 0 3px #E8A9C4;
+}
+
+/* ---------- Panneau posé sur le soleil ---------- */
+#soleil {
+    position: fixed;
+    left: 2.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22vw;
+    max-height: 92vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    z-index: 5;
+}
+
+#soleil .bloc {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1.1em;
+    padding: 0.8em 1em;
+    box-shadow: 0 2px 8px rgba(190, 150, 40, 0.18);
+    backdrop-filter: blur(2px);
+}
+
+#soleil .bloc-actif {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #E8A9C4;
+}
+
+#soleil .bloc-danger {
+    border-color: #d9534f;
+}
+
+#soleil h3 {
+    margin: 0 0 0.5em;
+    font-size: 1.05em;
+    color: #5c4310;
+}
+
+#soleil .aide,
+#soleil .astuce {
+    margin: 0 0 0.6em;
+    font-size: 0.85em;
+    color: #6b5a2a;
+}
+
+#soleil .astuce {
+    text-align: center;
+    margin: 0;
+}
+
+#soleil .apercu {
+    margin: 0 0 0.5em;
+    padding: 0.5em 0.7em;
+    background: #fff;
+    border-radius: 0.7em;
+    font-size: 0.95em;
+    word-break: break-word;
+}
+
+#soleil select,
+#soleil textarea {
+    width: 100%;
+    border: none;
+    border-radius: 0.8em;
+    padding: 0.45em 0.7em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#soleil textarea {
+    resize: vertical;
+    min-height: 5em;
+}
+
+#soleil select:focus,
+#soleil textarea:focus {
+    outline: 2px solid #E8A9C4;
+}
+
+#soleil .boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.6em;
+}
+
+.btn {
+    display: inline-block;
+    background: #E8A9C4;
+    color: #4a1b30;
+    border: none;
+    border-radius: 999px;
+    padding: 0.45em 1.1em;
+    font-family: inherit;
+    font-size: 0.95em;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover { background: #d98aa9; color: #fff; }
+
+.btn-sec { background: #e9e4d0; color: #4a4020; }
+.btn-sec:hover { background: #d8d1b0; color: #2e2810; }
+
+.btn-danger { background: #d9534f; color: #fff; }
+.btn-danger:hover { background: #b93e3a; }
+
+/* ---------- Responsive ---------- */
+/* Tablettes / petits écrans : le soleil devient trop étroit, on empile. */
+@media (max-width: 900px) {
+    html {
+        background-size: cover;
+        background-position: left center;
+    }
+
+    body {
+        font-size: 16px;
+        width: 92%;
+        max-width: 600px;
+        margin: 15px auto;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 16px;
+    }
+
+    #formulaire {
+        padding: 0.7em;
+    }
+
+    /* Le formulaire passe en une colonne */
+    #champs, #champs tbody, #champs tr, #champs td {
+        display: block;
+        width: 100%;
+    }
+
+    .lignes td:first-child {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    #soleil {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        margin-bottom: 1em;
+        background: #FBF1B8;
+        border-radius: 1.1em;
+        padding: 0.7em;
+    }
+
+    #messages {
+        margin-left: 0;
+    }
+
+    /* Boutons plus faciles à toucher */
+    .bulle { padding-right: 5.5em; }
+    .bulle .actions a { font-size: 1.2em; padding: 0.35em; }
+    .btn { padding: 0.6em 1.2em; }
+    #soleil select, #soleil textarea { font-size: 16px; } /* évite le zoom iOS */
+}
+
+@media (max-width: 420px) {
+    body { width: 96%; padding: 10px; margin: 8px auto; }
+    #soleil .boutons .btn { flex: 1 1 100%; }
+}
