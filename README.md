@@ -1,16 +1,16 @@
-# 💬 MiniChat en PHP/MySQL
+#  MiniChat en PHP/MySQL
 
 Adaptation de l'ancien fil rouge du cours d'OpenClassrooms **« Concevez votre site web avec PHP et MySQL »**.
 
 MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enregistrés en base de données et affichés dans la liste des derniers messages. Chaque message peut ensuite être modifié ou supprimé.
 
-## 📸 Aperçu
+## Aperçu
 
-![Aperçu de MiniChat](screenshot.png)
+![Aperçu de MiniChat]("Capture d'écran 2026-11-06 205712.png")
 
 > Dans cet exemple, le message `alert('XSS')` s'affiche tel quel : les balises sont neutralisées, la faille XSS est bien évitée. Le message « coucou » a été modifié : la date de modification apparaît à côté de la date de création.
 
-## 🎯 Objectifs
+##  Objectifs
 
 ### Version 1
 
