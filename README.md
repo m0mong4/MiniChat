@@ -14,18 +14,18 @@ MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enr
 
 ### Version 1
 
-- ✅ Réaliser une base de données en SQL (utilisation du SGBD MySQL)
-- ✅ Utiliser un objet de connexion (PDO)
-- ✅ Afficher le contenu d'une table dans une page web (les *n* derniers commentaires)
-- ✅ Ajouter un commentaire en base de données
-- ✅ Se protéger des failles XSS (via la suppression ou l'échappement des balises)
-- ✅ Découvrir les [variables de session](https://www.php.net/manual/fr/reserved.variables.session.php)
+-  Réaliser une base de données en SQL (utilisation du SGBD MySQL)
+-  Utiliser un objet de connexion (PDO)
+-  Afficher le contenu d'une table dans une page web (les *n* derniers commentaires)
+-  Ajouter un commentaire en base de données
+-  Se protéger des failles XSS (via la suppression ou l'échappement des balises)
+-  Découvrir les [variables de session](https://www.php.net/manual/fr/reserved.variables.session.php)
 
 ### Version 2
 
-- ✅ Permettre à l'utilisateur de choisir le nombre de commentaires à afficher
-- ✅ Pouvoir modifier un commentaire spécifique (dissocier date de création et date de modification)
-- ✅ Pouvoir supprimer un commentaire spécifique (avec confirmation de suppression)
+-  Permettre à l'utilisateur de choisir le nombre de commentaires à afficher
+-  Pouvoir modifier un commentaire spécifique (dissocier date de création et date de modification)
+-  Pouvoir supprimer un commentaire spécifique (avec confirmation de suppression)
 
 ##  Fonctionnalités
 
@@ -114,7 +114,7 @@ puis ouvrir `http://localhost:8000`.
 | Injection SQL | Requêtes préparées PDO (`prepare` / `execute`) |
 | Suppression accidentelle | Page de confirmation, suppression uniquement via `POST` |
 
-## 📚 Ressources
+##  Ressources
 
 - [Cours OpenClassrooms : Concevez votre site web avec PHP et MySQL](https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql)
 - [Documentation PHP : PDO](https://www.php.net/manual/fr/book.pdo.php)
