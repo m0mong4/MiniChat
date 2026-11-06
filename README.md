@@ -6,7 +6,7 @@ MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enr
 
 ## Aperçu
 
-![Aperçu de MiniChat]("Capture d'écran 2026-11-06 205712.png")
+![Aperçu de MiniChat]("screenshot.png")
 
 > Dans cet exemple, le message `alert('XSS')` s'affiche tel quel : les balises sont neutralisées, la faille XSS est bien évitée. Le message « coucou » a été modifié : la date de modification apparaît à côté de la date de création.
 
@@ -27,7 +27,7 @@ MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enr
 - ✅ Pouvoir modifier un commentaire spécifique (dissocier date de création et date de modification)
 - ✅ Pouvoir supprimer un commentaire spécifique (avec confirmation de suppression)
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
 - **Envoi de messages** : pseudo (25 caractères max) et message (255 caractères max).
 - **Pseudo mémorisé** grâce à une variable de session : il est pré-rempli à chaque nouvel envoi.
@@ -37,7 +37,7 @@ MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enr
 - **Protection contre les failles XSS** à l'enregistrement (`strip_tags`) et à l'affichage (`htmlspecialchars`).
 - **Requêtes préparées PDO** pour se protéger des injections SQL.
 
-## 🗂️ Structure du projet
+##  Structure du projet
 
 ```
 MiniChat/
@@ -51,7 +51,7 @@ MiniChat/
 └── screenshot.png         # Capture d'écran pour le README
 ```
 
-## 🛠️ Installation
+##  Installation
 
 ### Prérequis
 
@@ -92,7 +92,7 @@ $username = "root";
 $password = "";
 ```
 
-> ⚠️ Ne publiez jamais vos vrais identifiants sur GitHub.
+>  Ne publiez jamais vos vrais identifiants sur GitHub.
 
 ### 4. Lancer le projet
 
@@ -106,7 +106,7 @@ php -S localhost:8000
 
 puis ouvrir `http://localhost:8000`.
 
-## 🔒 Sécurité
+##  Sécurité
 
 | Risque | Protection mise en place |
 | --- | --- |
