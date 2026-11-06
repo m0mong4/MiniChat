@@ -6,7 +6,7 @@ MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enr
 
 ## Aperçu
 
-![Aperçu de MiniChat]("screenshot.png")
+![Aperçu de MiniChat](screenshot.png)
 
 > Dans cet exemple, le message `alert('XSS')` s'affiche tel quel : les balises sont neutralisées, la faille XSS est bien évitée. Le message « coucou » a été modifié : la date de modification apparaît à côté de la date de création.
 
