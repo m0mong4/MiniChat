@@ -112,9 +112,3 @@ puis ouvrir `http://localhost:8000`.
 | Faille XSS | `strip_tags()` à l'enregistrement et `htmlspecialchars()` (fonction `h()`) à l'affichage |
 | Injection SQL | Requêtes préparées PDO (`prepare` / `execute`) |
 | Suppression accidentelle | Page de confirmation, suppression uniquement via `POST` |
-
-##  Ressources
-
-- [Cours OpenClassrooms : Concevez votre site web avec PHP et MySQL](https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql)
-- [Documentation PHP : PDO](https://www.php.net/manual/fr/book.pdo.php)
-- [Documentation PHP : sessions](https://www.php.net/manual/fr/reserved.variables.session.php)
