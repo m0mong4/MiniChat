@@ -1,6 +1,6 @@
 #  MiniChat en PHP/MySQL
 
-Adaptation de l'ancien fil rouge du cours d'OpenClassrooms **« Concevez votre site web avec PHP et MySQL »**.
+
 
 MiniChat est un petit chat web : on saisit un pseudo et un message, ils sont enregistrés en base de données et affichés dans la liste des derniers messages. Chaque message peut ensuite être modifié ou supprimé.
 
